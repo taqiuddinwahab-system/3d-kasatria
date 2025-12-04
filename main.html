@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#0a0a0a;
+            color:white;
+            font-family:Arial;
+            flex-direction:column;
+        }
+        h2 { margin-bottom:20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Sign In to Continue</h2>
+
+    <!-- GOOGLE LOGIN -->
+    <div id="g_id_onload"
+        data-client_id="852142471376-lgo2urbd6l82pvl316ntar56i16c6f7l.apps.googleusercontent.com"
+        data-context="signin"
+        data-callback="onLogin"
+        data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin" data-type="standard"></div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script>
+        function onLogin(res){
+            console.log("Login success:", res);
+
+            // Redirect to main 3D page
+            window.location.href = "main.html";
+        }
+    </script>
+
+</body>
+</html>
